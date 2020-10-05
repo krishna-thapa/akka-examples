@@ -26,7 +26,8 @@ lazy val `akka-streams` = project
     settings,
     libraryDependencies ++= akkaStreamDependencies
   )
-  .dependsOn(common)
+  // Depends on common project for both test and compile
+  .dependsOn(common % "test->test;compile->compile")
 
 // All the dependencies used in the project
 lazy val dependencies =
