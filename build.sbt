@@ -36,7 +36,8 @@ lazy val dependencies =
   }
 
 lazy val commonDependencies = Seq(
-  dependencies.slf4j
+  dependencies.slf4j,
+  dependencies.akkaStream
 )
 
 lazy val akkaStreamDependencies = Seq(
